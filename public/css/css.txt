@@ -1,0 +1,162 @@
+---fichier header
+<div>
+    <img src="{{asset('images/logo-events.png')}}" alt="Logo" class="logo">
+        <nav class="navbar">
+            <a href="{{route('accueil')}}">Accueil</a>
+            <a href="{{route('services')}}">Services</a>
+            <a href="{{route('contact')}}">Contact</a>
+            <a href="{{route('personnel')}}">Personnel</a>
+        </nav>
+</div>
+---fichier index
+
+@extends('events.app')
+
+@section('title', 'Contact - Events')
+
+@section('content')
+    <section id="description">
+        <h3>Bienvenue sur la page officielle de <h1>Events</h1></h3>
+        <p id="sect-description">
+            Events est une entrprise du secteur de l'evenementiel.
+            Elle propose des services de qualité pour vos événements.
+            Fondée en 2020, Events s'est rapidement imposée comme un acteur incontournable dans le domaine de l'organisation d'événements.
+            Notre équipe est composée de professionnels passionnés et expérimentés, prêts à transformer vos idées en réalité.
+            Nous mettons a votre disposition des installations de qualité et un personnel devoué et efficace à l'oeuvre.
+        </p>
+    </section>
+@endsection    
+---fichier footer
+
+    <a href=""><img src="{{asset('images/tiktok.webp')}}" alt="tiktok" class="social-icon"></a>
+    <a href=""><img src="{{asset('images/insta.webp')}}" alt="instagram" class="social-icon"></a>
+    <a href=""><img src="{{asset('images/logo-facebook.webp')}}" alt="facebook" class="social-icon"></a>
+    <a href=""><img src="{{asset('images/logo-whatsapp.webp')}}" alt="whatsapp" class="social-icon"></a>
+    &copy; 2026 Events. Tous droits réservés.
+
+---fichier app
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>@yield('title')</title>
+</head>
+<body>
+    @include('events.header')
+    <main>
+        @yield('content')
+    </main>
+    @include('events.footer')
+</body>
+</html>
+
+---fichier services
+    
+@extends('events.app')
+
+@section('title', 'Services - events')
+
+@section('content')
+    <div id="services">
+        <h1> Nos Services</h1>
+        <div class="service">
+            <h3> Location de salle </h3>
+            <p>
+                Nous mettons à votre disposition des salles de qualité pour vos evenements
+            </p>
+        </div>
+        <div class="service">
+            
+           <h3> Shooting photo </h3>
+           <p>
+                Nous mettons avotre disposition un local et un photographe qui se chargera de faire vos photos 
+           </p>
+        </div>
+        <div class="service">
+            <h3> Service-Traiteur </h3>
+            <p>Pour vos evenements, nous vous proposons un service de traiteur professionnel </p>
+        </div>
+        <div class="service">
+            <h3> Service-Decoration </h3>
+            <p>Nous disposons d'un service de decoration professionnel que nous vous proposons </p>
+        </div>
+        <div class="service">
+            <h3> Service-Maquillage </h3>
+            <p>Nous disposons d'un service de maquillage professionnel que nous vous proposons </p>
+        </div>
+        <div class="service">
+            <h3> Reportage</h3>
+            <p>
+                Nous disposons d'un service de reportage professionnel que nous vous proposons.
+                Grace à nos videastes pro, couvrez vos evenements sans craintes
+            </p>
+        </div>
+    </div>
+@endsection    
+
+---fichier contact
+    
+@extends('events.app')
+
+@section('title', 'Services - events')
+
+@section('content')
+    <div id="services">
+        <h1> Nos Services</h1>
+        <div class="service">
+            <h3> Location de salle </h3>
+            <p>
+                Nous mettons à votre disposition des salles de qualité pour vos evenements
+            </p>
+        </div>
+        <div class="service">
+            
+           <h3> Shooting photo </h3>
+           <p>
+                Nous mettons avotre disposition un local et un photographe qui se chargera de faire vos photos 
+           </p>
+        </div>
+        <div class="service">
+            <h3> Service-Traiteur </h3>
+            <p>Pour vos evenements, nous vous proposons un service de traiteur professionnel </p>
+        </div>
+        <div class="service">
+            <h3> Service-Decoration </h3>
+            <p>Nous disposons d'un service de decoration professionnel que nous vous proposons </p>
+        </div>
+        <div class="service">
+            <h3> Service-Maquillage </h3>
+            <p>Nous disposons d'un service de maquillage professionnel que nous vous proposons </p>
+        </div>
+        <div class="service">
+            <h3> Reportage</h3>
+            <p>
+                Nous disposons d'un service de reportage professionnel que nous vous proposons.
+                Grace à nos videastes pro, couvrez vos evenements sans craintes
+            </p>
+        </div>
+    </div>
+@endsection    
+
+---fichier personnel
+
+@extends('events.app')
+
+@section('title', 'Personnel - Events')
+
+@section('content')
+    <p class="personnel" id="pdg"><strong>PDG : </strong> BANDA BONI Vianney</p>
+    <p class="personnel"><strong>DSI : </strong> TOGBE Hamed</p>
+    <p class="personnel"><strong>Photographe en chef : </strong> Augustus WATERS</p>
+    <p class="personnel"><strong>Cheffe maquillage : </strong> Hazel Grace LANCASTER</p>
+    <p class="personnel"><strong>Restaurateur : </strong> Tirion LANNISTER</p>
+    <p class="personnel"><strong>Accessoiriste : </strong> Lord STARK</p>
+    <p class="personnel"><strong>Chargé de la clientèle : </strong> Lady STARK</p>
+    <p class="personnel"><strong>Technicien de surface : </strong> Socrate</p>
+    <p class="personnel"><strong>Technicien de surface : </strong> Socrate</p>
+    <p class="personnel"><strong>technicien de surface : </strong> Georges COOPER</p>
+   
+@endsection    
